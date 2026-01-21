@@ -15,28 +15,41 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .navbar-container {
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    gap: 40px;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 32px;
+    max-width: 1200px;
+    max-width: 0 auto;
 
    
 }
     .nav-logo img {
         width: 180px;
         height: auto;
+    }
         
-        nav-menu {
+    .nav-menu{ 
         display: flex;
         list-style: none; 
         gap: 25px;
         padding: 0;
         margin: 0;   
-        }
+    }
 
         .nav-link {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-}  
+        .nav-link:hover {
+            color: #ffcc00;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px;
+        }
