@@ -1,0 +1,107 @@
+/* ==============================
+   GRID DE ENTRENADORES
+   ============================== */
+.trainers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* ==============================
+   TARJETA DE ENTRENADOR
+   ============================== */
+.trainer-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 2rem); /* 3 columnas (Desktop) */
+    max-width: calc(33.333% - 2rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+   IMAGEN DEL ENTRENADOR
+   ============================== */
+.trainer-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #f2f2f2;
+}
+
+/* ==============================
+   INFORMACIÓN DEL ENTRENADOR
+   ============================== */
+.trainer-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Nombre */
+.trainer-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* Región */
+.trainer-region {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Medallas */
+.trainer-badges {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+/* Estado */
+.trainer-status {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+/* ==============================
+   MEDIA QUERIES - RESPONSIVO
+   ============================== */
+
+/* Tablet (hasta 768px) */
+@media screen and (max-width: 768px) {
+    .trainer-card {
+        flex: 1 1 calc(50% - 1.5rem); /* 2 columnas */
+        max-width: calc(50% - 1.5rem);
+    }
+
+    .trainer-image {
+        height: 200px;
+    }
+}
+
+/* Mobile (hasta 480px) */
+@media screen and (max-width: 480px) {
+    .trainer-card {
+        flex: 1 1 100%; /* 1 columna */
+        max-width: 100%;
+    }
+
+    .trainer-image {
+        height: 180px;
+    }
+
+    .trainer-name {
+        font-size: 1.2rem;
+    }
+}
